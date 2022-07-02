@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Muli:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
+/* fonte primaria */
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body{
+  background-color: #262626;
+}
+
+:root {
+  --font-primary: "Baloo Da 2", serif;
+  --font-secundary: "Josefin Slab", serif;
+  --font-action: "Muli", serif;
+  --font-primary-page:'Kdam Thmor Pro', sans-serif;;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+
+.banner {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.banner h1 {
+  color: #ffffff;
+  font-size: 5rem;
+  font-family:'Kdam Thmor Pro';
+  font-weight: 200;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: moveBanner 1s 0.5s forwards;
+}
+
+.banner p {
+  font-family: var(--font-secundary);
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: moveBanner 1s 0.7s forwards;
+}
+
+.banner button {
+  font-family: var(--font-action);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background: -webkit-linear-gradient(to right, #E8a000, #f8d030);
+  background: linear-gradient(to left, #E8a000, #f8d030);
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+}
+button a{
+  color: #fff;
+
+}
+
+@keyframes moveBanner {
+  0% {
+    transform: translateY(10rem) rotateY(-30deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(0);
+    opacity: 1;
+  }
+}
+
+.conhecimentos {
+  height: 100%;
+  display: grid;
+  background-color: #262626;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(6, 6rem);
+  row-gap: 0.5rem;
+}
+
+.conhecimento:nth-child(1) {
+  grid-column: 4 / 7;
+  grid-row: 1 /  3  ;
+}
+
+.conhecimento:nth-child(2) {
+  grid-column: 2 / 5;
+  grid-row: 3 / 5;
+}
+
+.conhecimento:nth-child(3) {
+  grid-column: 4 / 7;
+  grid-row: 5 / -1;
+}
+
+.conhecimento:nth-child(4) {
+  grid-column: 12/ 15;
+  grid-row: 1 / 3;
+}
+
+.conhecimento:nth-child(5) {
+  grid-column: 12/ 15;
+  grid-row: 3 / 5;
+}
+
+.conhecimento:nth-child(6) {
+  grid-column: 11 / 14;
+  grid-row: 5 / -1;
+}
+
+.sessao-conhecimentos {
+  background-color: #f5f5f5;
+  height: 100%;
+}
+
+.blocobee{
+  width:80%;
+  height: 500px;
+  top: 900px;
+  background-color: #313131;
+  display: inline-block;
+  position: absolute;
+  
+
+}
+
+.sessao-beetech {
+  background-color: #313131;
+  height: 100vh;
+  width: 100%;
+}
+
+.sessao-header {
+  display: flex;
+  align-items: center;
+  background-color: #262626;
+  justify-content: center;
+}
+.sessao-header-beetech {
+  display: flex;
+  align-items: center;
+  background-color: #313131;
+  justify-content: center;
+}
+.sessao-header-beetech h1 {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: #f8d030;
+  background-color: #313131;
+  border-bottom: solid 3px #eabb31;
+  margin-bottom: 1.5rem;
+}
+
+.sessao-header-beetech h4 {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: #f8d030;
+  background-color: #262626;
+  border-bottom: solid 3px #eabb31;
+  margin-bottom: 1.5rem;
+}
+
+
+.sessao-header h1 {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: #f8d030;
+  background-color: #313131;
+  border-bottom: solid 3px #eabb31;
+  margin-bottom: 1.5rem;
+}
+
+.sessao-header h4 {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: #f8d030;
+  background-color: #262626;
+  border-bottom: solid 3px #eabb31;
+  margin-bottom: 1.5rem;
+}
+
+h3{
+  font-size: 1rem;
+  font-weight: 100;
+  font-family: 'Roboto Slab', serif;
+  color: #f0dd90;
+}
+#ajust-h3{
+  position: relative;
+  left: 1%;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+/* classe dos integrantes */
+
+
+.sessao-header-integrantes {
+  display: flex;
+  align-items: center;
+  background-color: #313131;
+  justify-content: center;
+  height: 100%;
+}
+.sessao-header-integrantes h4 {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: #f8d030;
+  background-color: #313131;
+  border-bottom: solid 3px #eabb31;
+  margin-bottom: 1.5rem;
+}
+
+
+.conhecimento-header {
+  display: flex;
+  align-items: center;
+  color: #4b4b4b;
+}
+
+.conhecimento-header i {
+  font-size: 2.5rem;
+}
+
+.conhecimento-header h3 {
+  font-family: var(--font-secundary);
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+.conhecimento-text {
+  font-family: var(--font-secundary);
+  margin-top: 1rem;
+  color: white;
+}
+.conhecimento-text p{
+  font-size: 24px;
+}
+
+.conhecimentos-img-wrapper {
+  grid-column: 7 /11;
+  grid-row: 3/ 11 ;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  left: 575px;
+}
+
+.conhecimentos-img-wrapper img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.projetos {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5rem;
+  background-color: #313131;
+  
+}
+
+.card {
+  width: 18rem;
+  height: 25rem;
+  position: relative;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  border-radius: 0.5rem;
+}
+
+.card-img-wrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.card:hover .card-img-wrapper img {
+  opacity: 0.5;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  padding: 2rem;
+  text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
+  transition: all 0.3s;
+}
+
+.card-info h2 {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #eee;
+}
+
+.card-info h3 {
+  font-family: var(--font-action);
+  font-weight: bolder;
+  color: #D07808;
+  margin-bottom: 1.5rem;
+}
+
+.card-info p {
+  font-family: var(--font-secundary);
+  color: #eee;
+  font-weight: 400;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: -webkit-linear-gradient(to right, #E8a000, #f09820);
+  background: linear-gradient(to left, #E8a000, #f09820);
+  font-family: var(--font-action);
+  color: #eee;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
+}
+
+.card-info button {
+  width: 8rem;
+  height: 2.5rem;
+}
+
+.card:hover .card-info {
+  bottom: 2rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-submit {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: 80%;
+  height: 2.5rem;
+  margin-top: 1rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+footer{
+  width: 100%;
+  height: 6rem;
+  background-color: #17181b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content p{
+  font-family: var(--font-secundary);
+  color: #a7a7a7;
+  font-size: 1.2rem;
+}
+
+.social-list a{
+  margin: 0 2rem;
+  color: #a7a7a7;
+  font-size: 1.3rem;
+}
+
+.social-list ul {
+  display: flex;
+}
+
+#link-topo{
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(to left,#E8a000, #f8d030);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: .3rem;
+  box-shadow:  0 0.1rem 0.6rem #00000009;
+}
+
+.container-center{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.carrossel{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carrossel .fotos{
+  width: 500%;
+  animation: animacao 15s infinite;
+}
+
+.carrossel .fotos img{
+  width: 19.9%;
+}
+
+
+@keyframes animacao {
+  0%{margin-left: 0;}
+  20%{margin-left:0;}
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+  50%{margin-left: -200%;}
+  70%{margin-left: -200%;}
+  75%{margin-left: -300%;}
+  95%{margin-left: -300%;}
+  100%{margin-left: -400%;}
+
+}
+
+
+
+
+
+.sessao-inegrantes{
+  width: 100%;
+}
+
+#ajust-main {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#ajust {
+  float: left;
+  left: 53%;  /* testar em outros monitores */
+  position: relative;
+}
+
+
+#ajust a {
+  display: block;
+  color: #f8d030;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: 'Fredoka One', cursive;
+  font-size: 20px;
+  
+  
+}
+#ajust_logo {
+  float: left;
+  left:-50px;  /* testar em outros monitores */
+  position: relative;
+
+}
+#ajust_logo a {
+  display: block;
+  color: #f8d030;
+  text-align: center;
+  padding: 10px 60px;
+  text-decoration: none;
+  font-family:'Kdam Thmor Pro';
+  font-size: 20px;
+  
+  
+}
+
+
+
+.bar-links{
+  width: 100%;
+  height: 40px;
+  background-color: #232427;
+  position: fixed;
+  z-index: 1;
+
+}
+
+h2{
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: #f8d030;
+  border: #17181b 2px;
+  margin-left: 10px;
+ 
+}
+.blocobee h2{
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: #f8d030;
+  border: #17181b 2px;
+  margin-left: 10px;
+  position:relative;
+  left: 40px;
+  
+}
+
+.blocobee h3{
+  font-size: 1.4rem;
+  font-weight: 100;
+  font-family: 'Roboto Slab', serif;
+  color: #f0dd90;
+  position: relative;
+  left: 40px;
+}
+.blocobee img{
+  height: 350px;
+  position: absolute; 
+  left: 80%;
+  top: 10%;
+}
+
+#numero{
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: #f8d030;
+  border: #17181b 2px;
+  margin-left: 10px;
+}
